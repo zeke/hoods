@@ -30,6 +30,8 @@
   },
   "homepage": "https://github.com/zeke/hoods#readme",
   "dependencies": {
+    "lodash.flatten": "^3.0.2",
+    "require-dir": "^0.3.0",
     "turf": "^2.0.2"
   },
   "devDependencies": {

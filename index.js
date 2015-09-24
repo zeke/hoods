@@ -1,6 +1,7 @@
 const turf = require('turf')
 const assert = require('assert')
-const CA = require('./data/ca.json')
+const flatten = require('lodash.flatten')
+const states = require('require-dir')('./data')
 
 module.exports = function hoods (lng, lat) {
 
@@ -15,18 +16,23 @@ module.exports = function hoods (lng, lat) {
     }
   }
 
-  return CA.features
-    .filter(function (hood) {
-      return turf.inside(point, hood)
+  return flatten(
+    Object.keys(states).map(function(abbr){
+      return states[abbr].features
+        .filter(function (hood) {
+          return turf.inside(point, hood)
+        })
+        .map(function (hood) {
+          return {
+            name: hood.properties.NAME,
+            city: hood.properties.CITY,
+            county: hood.properties.COUNTY,
+            state: hood.properties.STATE,
+            region_id: hood.properties.REGIONID,
+            geometry: hood.geometry
+          }
+        })
     })
-    .map(function (hood) {
-      return {
-        name: hood.properties.NAME,
-        city: hood.properties.CITY,
-        county: hood.properties.COUNTY,
-        state: hood.properties.STATE,
-        region_id: hood.properties.REGIONID,
-        geometry: hood.geometry
-      }
-    })
+  )
+
 }
