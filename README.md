@@ -1,6 +1,6 @@
 # hoods
 
-Give me a lat/lng and I'll give you a neighborhood
+Give me a lat/lng and I'll give you a neighborhood.
 
 See [hoods-as-a-service.herokuapp.com](https://hoods-as-a-service.herokuapp.com) for examples and an HTML5 geolocation demo.
 
@@ -12,6 +12,7 @@ See [hoods-as-a-service.herokuapp.com](https://hoods-as-a-service.herokuapp.com)
 - Data was converted from shapefiles to GeoJSON using [gdal](http://ben.balter.com/2013/06/26/how-to-convert-shapefiles-to-geojson-for-use-on-github/).
 - The point-in-polygon function is powered by [turf](http://turfjs.org/static/docs/module-turf_inside.html).
 - If the given point is in more than one neighborhood, all matches are returned.
+- Data is only for US
 
 ## Installation
 
