@@ -4,20 +4,13 @@ const flatten = require('lodash.flatten')
 const states = require('require-dir')('./data')
 
 module.exports = function hoods (lng, lat) {
-
   assert(lng, 'lng is required')
   assert(lat, 'lat is required')
 
-  var point = {
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [lng, lat]
-    }
-  }
+  const point = turf.point([lng, lat])
 
   return flatten(
-    Object.keys(states).map(function(abbr){
+    Object.keys(states).map(function (abbr) {
       return states[abbr].features
         .filter(function (hood) {
           return turf.inside(point, hood)
@@ -34,5 +27,4 @@ module.exports = function hoods (lng, lat) {
         })
     })
   )
-
 }
