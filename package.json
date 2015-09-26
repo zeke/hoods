@@ -1,7 +1,7 @@
 {
   "name": "hoods",
   "version": "1.0.2",
-  "description": "Give me a lat/lng and I'll give you a neighborhood",
+  "description": "Give me a lng/lat and I'll give you a neighborhood",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
