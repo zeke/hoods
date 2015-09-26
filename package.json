@@ -1,6 +1,6 @@
 {
   "name": "hoods",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Give me a lat/lng and I'll give you a neighborhood",
   "main": "index.js",
   "scripts": {
