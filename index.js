@@ -1,9 +1,10 @@
 const turf = require('turf')
 const assert = require('assert')
 const flatten = require('lodash.flatten')
+const ljust = require('string-just').ljust
 const states = require('require-dir')('./data')
 
-module.exports = function hoods (lng, lat) {
+var hoods = module.exports = function hoods (lng, lat) {
   assert(lng, 'lng is required')
   assert(lat, 'lat is required')
 
@@ -28,3 +29,12 @@ module.exports = function hoods (lng, lat) {
     })
   )
 }
+
+// hoods.names = flatten(
+//   Object.keys(states).map(function (abbr) {
+//     return states[abbr].features
+//       .map(function (hood) {
+//         return `${hood.properties.STATE}  ${ljust(hood.properties.CITY, 30)}${hood.properties.NAME}`
+//       })
+//   })
+// ).sort()

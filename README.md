@@ -4,6 +4,8 @@ Give me a lat/lng and I'll give you a neighborhood.
 
 See [hoods-as-a-service.herokuapp.com](https://hoods-as-a-service.herokuapp.com) for examples and an HTML5 geolocation demo.
 
+For a list of included cities and neighborhood names, see [names.md](names.md). If your city is not represented, please [ask Zillow nicely for more data](https://twitter.com/zillow/status/647524599543021569).
+
 ## Notes
 
 - This module doesn't make any network requests.
