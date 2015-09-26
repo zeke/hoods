@@ -1,6 +1,6 @@
 # hoods
 
-Give me a lat/lng and I'll give you a neighborhood.
+Give me a lng/lat and I'll give you a neighborhood.
 
 See [hoods-as-a-service.herokuapp.com](https://hoods-as-a-service.herokuapp.com) for examples and an HTML5 geolocation demo.
 
