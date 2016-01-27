@@ -36,7 +36,7 @@
     "turf": "^2.0.2"
   },
   "devDependencies": {
-    "mocha": "^2.3.3",
+    "mocha": "^2.4.4",
     "standard": "^5.3.1"
   }
 }
